@@ -19,11 +19,13 @@
     "eject": "react-scripts eject",
     "serve": "serve -s build",
     "serve-https": "serve-https",
+
     "predeploy" : "npm run build",
     "deploy" : "gh-pages -d build",
     "install_gh-pages": "npm install gh-pages --save-dev",
-    "git_add": "git add .",
     "git_commitsetup": "git commit -m \"setup gh-pages\"",
+
+    "git_add": "git add .",
     "git_push": "git push",
     "git_deploy": "npm run deploy"
 
