@@ -16,7 +16,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve": "serve -s build",
+    "serve-https": "serve-https",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build",
+    "git_add": "git add .",
+    "git_commitsetup": "git commit -m 'setup gh-pages'",
+    "git_push": "git push",
+    "install_gh-pages": "npm install gh-pages --save-dev"
   },
   "eslintConfig": {
     "extends": [
@@ -35,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
