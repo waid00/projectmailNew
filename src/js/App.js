@@ -41,8 +41,10 @@ export default function ContactUs() {
                 );
             e.target.reset();
             console.log("email was sent. online!")
+            document.getElementById("console").innerHTML = "Email will arrive shortly.";
         } else {
             console.log("Email saved to send later.");
+            document.getElementById("console").innerHTML = "Email saved to send later. Connect to the internet  to send. The email will be sent shorly after the status change.";
         }
     }
     useEffect(() => {
@@ -88,7 +90,8 @@ export default function ContactUs() {
     return (
         <>
             <header>
-                <h1 className="header-title">JavaScript Application AI</h1>
+                <h1 className="header-title">Sending emails with JavaScript</h1>
+                <p>Type your email there and click send to recieve/give an email!</p>
             </header>
             <form onSubmit={sendEmail}>
                 <label>Email from</label>
@@ -102,7 +105,7 @@ export default function ContactUs() {
                 <input type="submit" value="Send" className="submit"/>
             </form>
             <p className={`status ${status.toLowerCase()}`}>Status: {status}</p>
-
+            <p id={"console"}></p>
         </>
     );
 }
